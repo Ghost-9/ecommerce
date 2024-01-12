@@ -19,7 +19,7 @@ const filters = [
       { value: "belts", label: "Belts" },
       { value: "gloves", label: "Gloves" },
       { value: "scarves", label: "Scarves" },
-      { value: "wallets", label: "Wallets" },
+      { value: "jacket", label: "Jacket" },
     ],
   },
   {
@@ -43,6 +43,8 @@ const filters = [
       { value: "brown", label: "Brown" },
       { value: "green", label: "Green" },
       { value: "yellow", label: "Yellow" },
+      { value: "white", label: "White" },
+      { value: "marble", label: "Marble" }
     ],
   },
 ]
@@ -83,13 +85,13 @@ export function ProductFilters() {
                       onClick={(e) => {
                         const params = new URLSearchParams(searchParams)
                         const checked = e.currentTarget.dataset.state === "checked"
-                        checked 
-                          ? params.delete(section.id) 
+                        checked
+                          ? params.delete(section.id)
                           : params.set(section.id, option.value)
                         router.replace(`/?${params.toString()}`)
                       }}
                     />
-                    <label 
+                    <label
                     htmlFor={`filter-${section.id}-${optionIdx}`}
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                       {option.label}

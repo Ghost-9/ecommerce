@@ -12,8 +12,8 @@ interface Props {
 
 export function Providers({ children }: Props) {
   return <>
-    <CartProvider 
-      currency="USD"
+    <CartProvider
+      currency="INR"
       shouldPersist
       cartMode="checkout-session"
       stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!}
@@ -23,7 +23,7 @@ export function Providers({ children }: Props) {
         {children}
         <TailwindIndicator />
       </ThemeProvider>
-      
+
     </CartProvider>
     </>
 }

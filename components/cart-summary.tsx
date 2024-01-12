@@ -12,7 +12,7 @@ export function CartSummary() {
    const [isLoading, setLoading] = useState(false)
    const isDisabled = isLoading || cartCount! === 0
 
-  const shippingAmount = cartCount! > 0 ? 500 : 0
+  const shippingAmount = cartCount! > 0 ? 10000 : 0
   const totalAmmont = totalPrice! + shippingAmount
 
   async function handleCheckout() {
@@ -48,13 +48,13 @@ export function CartSummary() {
             <span>Shipping estimate</span>
           </dt>
           <dd className="text-sm font-medium">
-            {formatCurrencyString({value: shippingAmount, currency: "USD"})}
+            {formatCurrencyString({value: shippingAmount, currency: "INR"})}
           </dd>
         </div>
         <div className="flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-600">
           <dt className="text-base font-medium">Order total</dt>
           <dd className="text-base font-medium">
-          {formatCurrencyString({value: totalAmmont, currency: "USD"})}
+          {formatCurrencyString({value: totalAmmont, currency: "INR"})}
           </dd>
         </div>
       </dl>

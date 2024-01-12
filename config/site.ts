@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Magestica",
-  description: "A one stop shop for your accessories",
+  name: "The Daata Saa ",
+  description: "The Daata Saa : Regal Heritage of Marwar Jodhpur",
   footer: [
     { name: "Home", href: "/" },
     { name: "About", href: "#" },
